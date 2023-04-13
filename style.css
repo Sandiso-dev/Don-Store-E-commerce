@@ -1,0 +1,237 @@
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Sora', sans-serif;
+    transition: 0.6s;
+}
+
+/*THE NAV SECTION*/
+header h1{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.exit{
+    position: absolute;
+    top: 2px;
+    left: 73%;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: x-large;
+    background-color: lightgrey;
+    border-radius: 50%;
+    padding: 8px 10px;
+}
+
+.container{
+    width: 100%;
+    margin: 0;
+    transition: 0.5s;
+}
+
+header{
+    padding: 12px 12px;
+    display: grid;
+    grid-template-columns: 1fr 80px;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    border-radius: 17px;
+    color: white;
+
+}
+
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+
+.logo{
+    display: flex;
+}
+
+.icons{
+    position: absolute;
+    right: 1%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+header .shopping i{
+    cursor: pointer;
+}
+
+header .shopping span{
+    background-color: blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: -5px;
+    left: 85%;
+    padding: 1px 3px;
+}
+
+@media (max-width: 700px){
+    .d-logo{
+        display: none;
+    }
+}
+
+
+
+/*the list of which i will create in app.js*/
+.list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+}
+
+
+.list .item{
+    text-align: center;
+    padding: 20px;
+    border-style: solid;
+    border-color: lightgray;
+   
+}
+
+.list .item button{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+
+
+
+.list img{
+ width: 80%;
+}
+
+@media (max-width: 700px){
+    .list{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+    }
+}
+
+
+/*ITEMS INSIDE THE CART*/
+.listcard li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+}
+
+.listcard li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.listcard img{
+    width: 60%;
+   }
+
+.card ul .items{
+    align-items: center;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+}
+
+.card .incart-name{
+    font-weight: 700;
+    display: inline;
+    padding-bottom: 16px;
+   border-bottom: solid;
+}
+
+.cart-btn{
+    width: 30px;
+    height: 30px;
+   margin-right: 5px;
+   color: white;
+   background-color: black;
+   font-size: 19px;
+   cursor: pointer;
+}
+
+.card ul span{
+    font-weight: 700;
+    margin-left: 7px;
+}
+
+
+
+/*the side cart */
+.card{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 500px;
+    background-color: white;
+    color: black;
+    height: 100vh;
+    transition: 0.6s;
+}
+
+.card h1{
+font-family: 'Orbitron', sans-serif;
+margin-top: 15px;
+padding: 0 15px;
+display: flex;
+
+}
+
+.card .checkout{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    bottom: 0;
+    height: 60px;
+    
+
+
+}
+
+
+.card .checkout div{
+    height: 70px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card .checkout div:nth-child(1){
+background-color: blue;
+color: white;
+}
+
+.card .checkout div:nth-child(2){
+    background-color:white;
+    color: black;
+}
+
+.active .card{
+    left: calc(100% - 400px);
+}
